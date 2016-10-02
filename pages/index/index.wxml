@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<scroll-view class="body" scroll-y="{{true}}" bindscrolltolower="fetchBefore">
+  <swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}">
+    <block wx:for="{{ top_stories }}">
+      <swiper-item class="swiper-item" data-id="{{item.id}}" bindtap="viewDetail">
+        <image src="{{item.image}}" mode="aspectFill" class="swiper-item-image"/>
+        <view class="image-mask"></view>
+        <text class="swiper-item-title">{{item.title}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="list">
+    <block class="list" wx:for="{{list}}" wx:for-item="day">
+      <text wx:if="{{day.title}}" class="section-title">{{day.title}}</text>
+      <block wx:for="{{day.stories}}">
+        <navigator url="../detail/detail?id={{item.id}}">
+          <view class="news">
+            <view class="news-body">
+              <text class="news-title">{{item.title}}</text>
+            </view>
+            <view class="news-right" wx:if="{{item.images.length}}">
+              <image src="{{item.images[0]}}" mode="aspectFill" class="news-image"/>
+            </view>
+          </view>
+        </navigator>
+      </block>
+    </block>
+  </view>
+  <loading hidden="{{!loading}}">
+    加载中...
+  </loading>
+</scroll-view>

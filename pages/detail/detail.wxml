@@ -1,0 +1,13 @@
+<view class="detail">
+  <view class="detail-header">
+    <image class="detail-image" src="{{detail.image}}" mode="aspectFill"></image>
+    <view class="image-mask"></view>
+    <text class="detail-title">{{detail.title}}</text>
+  </view>
+  <view class="detail-body">
+    <text>{{detail.content}}</text>
+  </view>
+  <loading hidden="{{!loading}}">
+    加载中...
+  </loading>
+</view>

@@ -1,0 +1,55 @@
+/**index.wxss**/
+.body {
+  height: 100%;
+}
+.swiper {
+  height: 200px;
+}
+
+.swiper-item-image {
+  width: 100%;
+}
+
+.swiper-item-title {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  padding: 0 15px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+.list {
+  padding:0 15px;
+}
+
+.section-title {
+  background-color: #00a2ea;
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  padding: 12px 0;
+  margin: 0 -15px;
+  font-size: 16px;
+}
+
+.news {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.news-title {
+  font-size: 16px;
+  color: #555;
+}
+
+.news-image {
+  width: 80px;
+  height: 80px;
+}
